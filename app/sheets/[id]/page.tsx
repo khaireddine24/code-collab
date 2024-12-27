@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import CodeEditor from '@/components/CodeEditor'
 import ShareButton from '@/components/ShareButton'
 import { Sheet } from '@/types'
+import Spinner from '@/components/Spinner'
 
 export default function SheetPage() {
   const params = useParams()
@@ -25,7 +26,7 @@ export default function SheetPage() {
     loadSheet()
   }, [loadSheet])
 
-  if (!sheet) return <div>Loading...</div>
+  if (!sheet) return <Spinner/>
 
   return (
     <div className="max-w-6xl mx-auto">

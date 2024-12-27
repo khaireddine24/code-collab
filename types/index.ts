@@ -13,3 +13,9 @@ export interface Sheet {
     name: string;
     image?: string;
   }
+
+  export interface ConfirmDeleteDialogProps {
+    onConfirm: () => void;
+    onCancel: () => void;
+    title:string;
+  }
